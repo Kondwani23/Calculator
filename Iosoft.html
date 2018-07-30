@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IoSoft Calculator</title>
+<meta lang="en-US">
+<meta charset="utf-8">
+<style>
+body{
+	background-image: url(Capture.png);
+padding:0;
+margin:0;}
+#f-div{
+margin:100px auto;
+width:500px;
+height:50px;
+border:3px ;
+font-family: times;
+background-color:green;
+box-sizing:border-box;
+}
+
+#main-div{
+	
+width:400px;
+height:240px;
+padding:20px;
+position:absolute;
+top:160px;
+right:459px;
+}
+
+#one,#two{
+width:193px;
+height:40px;
+margin-top:20px;
+}
+button{
+width:95px;
+height:40px;
+background-color:blue;
+color:white;
+border:2px solid green;
+cursor:pointer;
+}
+input{
+font-size:25px;
+}
+
+</style>
+</head>
+<body>
+
+	<div id="f-div">
+<center><h2 style="margin-top:8px;" id="result"></h2></center>
+</div>
+	
+
+<div id="main-div">
+<form>
+<input type="number" id="one" />
+<input type="number" id="two" />
+<br><br><br>
+<button onclick="return main()">Add</button>
+<button onclick="return main_1()">Sub</button>
+<button onclick="return main_2()">Multi</button>
+<button onclick="return main_3()">Div</button>
+</form>
+</div>
+
+
+<script>
+// start addition coding
+function main()
+
+{
+var x = Number(document.getElementById("one").value);
+var y = Number(document.getElementById("two").value);
+var result = document.getElementById("result");
+var z = add(x,y) ;
+result.innerHTML ="Your addition is :- "+ z;
+return false;
+
+}
+function add(a,b)
+{
+var x = a+b;
+return x;
+}
+// end Addition coding
+// Kondwani Frontend and Backend Developer
+//start sbu coding
+function main_1()
+
+{
+var x = Number(document.getElementById("one").value);
+var y = Number(document.getElementById("two").value);
+var result = document.getElementById("result");
+var z = sub(x,y) ;
+result.innerHTML ="Your substraction is :- "+ z;
+return false;
+
+}
+function sub(a,b)
+{
+var x = a-b;
+return x;
+}
+
+//end sub coding
+
+//start multi coding
+function main_2()
+
+{
+var x = Number(document.getElementById("one").value);
+var y = Number(document.getElementById("two").value);
+var result = document.getElementById("result");
+var z = multi(x,y) ;
+result.innerHTML ="Your multipication is :- "+ z;
+return false;
+
+}
+function multi(a,b)
+{
+var x = a*b;
+return x;
+}
+
+//end multi coding
+
+//start division coding
+function main_3()
+
+{
+var x = Number(document.getElementById("one").value);
+var y = Number(document.getElementById("two").value);
+var result = document.getElementById("result");
+var z = divi(x,y) ;
+result.innerHTML ="Your division is :- "+ z;
+return false;
+
+}
+function divi(a,b)
+{
+var x = a/b;
+return x;
+}
+
+//end division coding
+
+</script>
+
+
+
+</body>
+
+</html>
